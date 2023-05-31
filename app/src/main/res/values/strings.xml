@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BUBTPS</string>
+    <string name="enterpassword">PASSWORD</string>
+    <string name="enterusername">USERNAME</string>
+</resources>
