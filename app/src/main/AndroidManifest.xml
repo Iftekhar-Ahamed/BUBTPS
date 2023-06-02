@@ -13,6 +13,18 @@
         android:theme="@style/Theme.BUBTPS"
         tools:targetApi="31">
         <activity
+            android:name=".Status"
+            android:exported="false" />
+        <activity
+            android:name=".Checkout"
+            android:exported="false" />
+        <activity
+            android:name=".checkin"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
             android:name=".Home"
             android:exported="false" />
         <activity
