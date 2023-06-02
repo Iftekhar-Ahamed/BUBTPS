@@ -19,6 +19,9 @@ public class LogIn extends AppCompatActivity {
         login = findViewById(R.id.btn_login);
         login.setOnClickListener(new View.OnClickListener(){
             public  void onClick(View v){
+                Intent home = new Intent(LogIn.this, Home.class);
+                startActivity(home);
+                /*
                 uid = findViewById(R.id.login_username);
                 pass = findViewById(R.id.editTextTextPassword);
                 if(uid.getText().toString().equals("19202103239")&&pass.getText().toString().equals("1234")){
@@ -30,6 +33,8 @@ public class LogIn extends AppCompatActivity {
                 }
                 //Toast.makeText(LogIn.this,uid.getText().toString()+" "+pass.getText().toString(),Toast.LENGTH_SHORT).show();
                 //Toast.makeText(LogIn.this,"OK",Toast.LENGTH_SHORT).show();
+                */
+
             }
         });
     }
