@@ -7,14 +7,31 @@
     android:layout_height="match_parent"
     tools:context=".Checkout">
 
+    <TextView
+        android:id="@+id/textViewCheckOUTHeading"
+        android:layout_width="224dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="96dp"
+        android:gravity="center"
+        android:text="CHECK-OUT QR"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewp1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.686" />
+
     <ImageView
         android:id="@+id/imageViewcheckout"
         android:layout_width="288dp"
         android:layout_height="292dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.524"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCheckOUTHeading"
+        app:layout_constraintVertical_bias="0.281"
         tools:srcCompat="@tools:sample/avatars" />
 </androidx.constraintlayout.widget.ConstraintLayout>

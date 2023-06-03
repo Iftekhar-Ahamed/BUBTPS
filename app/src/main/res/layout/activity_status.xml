@@ -7,12 +7,85 @@
     tools:context=".Status">
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="STATUS"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/textViewp1"
+        android:layout_width="322dp"
+        android:layout_height="173dp"
+        android:layout_marginTop="104dp"
+        android:background="#2196F3"
+        android:gravity="center"
+        android:text="P1"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewp3"
+        android:layout_width="322dp"
+        android:layout_height="173dp"
+        android:background="#009688"
+        android:gravity="center"
+        android:text="P4"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRrefreshparkspace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewp5" />
+
+    <TextView
+        android:id="@+id/textViewp5"
+        android:layout_width="171dp"
+        android:layout_height="179dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="11dp"
+        android:background="#E91E63"
+        android:gravity="center"
+        android:text="P2"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewp1" />
+
+    <TextView
+        android:id="@+id/textViewp6"
+        android:layout_width="140dp"
+        android:layout_height="179dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="4dp"
+        android:background="#FF9800"
+        android:gravity="center"
+        android:text="P3"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toEndOf="@+id/textViewp5"
+        app:layout_constraintTop_toBottomOf="@+id/textViewp1" />
+
+    <TextView
+        android:id="@+id/textViewparkheding"
+        android:layout_width="224dp"
+        android:layout_height="37dp"
+        android:gravity="center"
+        android:text="AVAILABLE SPACE"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewp1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.686" />
+
+    <Button
+        android:id="@+id/buttonRrefreshparkspace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="REFRESH"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
