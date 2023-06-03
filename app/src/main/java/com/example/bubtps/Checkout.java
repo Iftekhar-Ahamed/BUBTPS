@@ -18,7 +18,7 @@ public class Checkout extends AppCompatActivity {
 
 
 
-        String s = "19202103239";
+        String s = "19202103025";
         pic = findViewById(R.id.imageViewcheckout);
         QRGEncoder qrgEncoder = new QRGEncoder(s, null, QRGContents.Type.TEXT, 1000);
         pic.setImageBitmap(qrgEncoder.getBitmap());
