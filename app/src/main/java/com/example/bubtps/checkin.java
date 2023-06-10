@@ -18,7 +18,6 @@ public class checkin extends AppCompatActivity {
         setContentView(R.layout.activity_checkin);
 
 
-//E halarput eita thik kor
 
         String s = "19202103239";
         pic = findViewById(R.id.imageViewCheckin);
