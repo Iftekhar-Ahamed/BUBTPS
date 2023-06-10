@@ -17,8 +17,8 @@ public class checkin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkin);
 
-
-
+        //We have to change the string for multiple use...
+        //Second comment
         String s = "19202103239";
         pic = findViewById(R.id.imageViewCheckin);
         QRGEncoder qrgEncoder = new QRGEncoder(s, null, QRGContents.Type.TEXT, 1500);
