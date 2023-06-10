@@ -34,7 +34,6 @@ public class LogIn extends AppCompatActivity {
                 //Toast.makeText(LogIn.this,uid.getText().toString()+" "+pass.getText().toString(),Toast.LENGTH_SHORT).show();
                 //Toast.makeText(LogIn.this,"OK",Toast.LENGTH_SHORT).show();
                 */
-
             }
         });
     }
