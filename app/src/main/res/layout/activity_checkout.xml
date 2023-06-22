@@ -5,6 +5,7 @@
     android:id="@+id/imageViewCheckout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".Checkout">
 
     <TextView
@@ -16,7 +17,6 @@
         android:text="CHECK-OUT QR"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textViewp1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
