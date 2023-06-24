@@ -14,9 +14,11 @@ import android.widget.TextView;
 public class Home extends AppCompatActivity {
     private Button profile,checkout,status;
     Dialog checkindialog;
-    Intent home;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Bundle data = getIntent().getExtras();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
@@ -27,22 +29,23 @@ public class Home extends AppCompatActivity {
 
         profile.setOnClickListener(new View.OnClickListener(){
             public  void onClick(View v){
-                home = new Intent(Home.this, Profile.class);
-                startActivity(home);
+                Intent profile= new Intent(Home.this, Profile.class);
+                profile.putExtras(data);
+                startActivity(profile);
             }
         });
 
 
         checkout.setOnClickListener(new View.OnClickListener(){
             public  void onClick(View v){
-                Intent home = new Intent(Home.this, Checkout.class);
-                startActivity(home);
+                Intent checkout = new Intent(Home.this, Checkout.class);
+                startActivity(checkout);
             }
         });
         status.setOnClickListener(new View.OnClickListener(){
             public  void onClick(View v){
-                Intent home = new Intent(Home.this, Status.class);
-                startActivity(home);
+                Intent status = new Intent(Home.this, Status.class);
+                startActivity(status);
             }
         });
     }
@@ -61,14 +64,14 @@ public class Home extends AppCompatActivity {
         });
         bike.setOnClickListener(new View.OnClickListener(){
             public  void onClick(View vi){
-                home = new Intent(Home.this, available_slots.class);
-                startActivity(home);
+                Intent availableSlot = new Intent(Home.this, available_slots.class);
+                startActivity(availableSlot);
             }
         });
         car.setOnClickListener(new View.OnClickListener(){
             public  void onClick(View vi){
-                home = new Intent(Home.this, available_slots.class);
-                startActivity(home);
+                Intent car = new Intent(Home.this, available_slots.class);
+                startActivity(car);
             }
         });
         checkindialog.show();
