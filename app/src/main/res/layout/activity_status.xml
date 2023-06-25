@@ -21,47 +21,53 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewp3"
+        android:id="@+id/textViewp4"
         android:layout_width="322dp"
         android:layout_height="173dp"
+        android:layout_marginTop="32dp"
         android:background="#009688"
         android:gravity="center"
         android:text="P4"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/buttonRrefreshparkspace"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewp5" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewp2"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textViewp5"
-        android:layout_width="171dp"
-        android:layout_height="179dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="11dp"
+        android:id="@+id/textViewp2"
+        android:layout_width="153dp"
+        android:layout_height="178dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="24dp"
         android:background="#E91E63"
         android:gravity="center"
         android:text="P2"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewp1" />
 
     <TextView
-        android:id="@+id/textViewp6"
-        android:layout_width="140dp"
+        android:id="@+id/textViewp3"
+        android:layout_width="150dp"
         android:layout_height="179dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="4dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="15dp"
         android:background="#FF9800"
         android:gravity="center"
         android:text="P3"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toEndOf="@+id/textViewp5"
+        app:layout_constraintHorizontal_bias="0.738"
+        app:layout_constraintStart_toEndOf="@+id/textViewp2"
         app:layout_constraintTop_toBottomOf="@+id/textViewp1" />
 
     <TextView
@@ -77,15 +83,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.686" />
-
-    <Button
-        android:id="@+id/buttonRrefreshparkspace"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="REFRESH"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

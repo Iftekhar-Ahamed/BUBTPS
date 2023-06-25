@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,23 +26,27 @@ public class LogIn extends AppCompatActivity {
     Intent home;
     private DatabaseReference mDatabase;
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
         login = findViewById(R.id.btn_login);
+        Loading loading = new Loading(LogIn.this);
         login.setOnClickListener(new View.OnClickListener(){
             public  void onClick(View v){
-//                home = new Intent(LogIn.this, Home.class);
-//                startActivity(home);
 
                 uid = findViewById(R.id.login_username);
                 pass = findViewById(R.id.editTextTextPassword);
                 mDatabase = FirebaseDatabase.getInstance().getReference();
+                loading.startLoading();
 
                 mDatabase.child("Profile").child(uid.getText().toString()).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<DataSnapshot> task) {
+                        loading.endLoading();
                         if (!task.isSuccessful()) {
                             Toast.makeText(LogIn.this,"Faild to reach DataBase",Toast.LENGTH_SHORT).show();
                         }else if(task.getResult().getValue()==null){
@@ -69,4 +75,6 @@ public class LogIn extends AppCompatActivity {
             }
         });
     }
+
+
 }

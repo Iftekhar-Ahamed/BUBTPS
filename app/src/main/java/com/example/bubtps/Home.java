@@ -11,16 +11,23 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.HashMap;
+
 public class Home extends AppCompatActivity {
     private Button profile,checkout,status;
     Dialog checkindialog;
-
+    String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Bundle data = getIntent().getExtras();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        if (data != null && data.containsKey("PI")) {
+            HashMap<String, String> hashMap= (HashMap<String, String>) data.getSerializable("PI");
+            id=hashMap.get("ID");
+        }
 
         profile = findViewById(R.id.btn_profile);
         checkout = findViewById(R.id.btn_checkout);
@@ -64,13 +71,17 @@ public class Home extends AppCompatActivity {
         });
         bike.setOnClickListener(new View.OnClickListener(){
             public  void onClick(View vi){
-                Intent availableSlot = new Intent(Home.this, available_slots.class);
-                startActivity(availableSlot);
+                Intent bike = new Intent(Home.this, available_slots.class);
+                String code = id+" bike";
+                bike.putExtra("code",code);
+                startActivity(bike);
             }
         });
         car.setOnClickListener(new View.OnClickListener(){
             public  void onClick(View vi){
+                String code = id+" car";
                 Intent car = new Intent(Home.this, available_slots.class);
+                car.putExtra("code",code);
                 startActivity(car);
             }
         });
