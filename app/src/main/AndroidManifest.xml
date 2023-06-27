@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-permission android:name="android.permission.CAMERA"/>
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +15,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BUBTPS"
         tools:targetApi="31">
+
+        <activity
+            android:name=".scanQrcode"
+            android:exported="false"
+            android:label="@string/title_activity_scan_qrcodr"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.BUBTPS" />
+        <activity
+            android:name=".CaptureActivityPortrait"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.BUBTPS" />
+        <activity
+            android:name=".admin_home"
+            android:exported="false" />
         <activity
             android:name=".available_slots"
             android:exported="false" />
