@@ -17,7 +17,7 @@ public class checkin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Bundle data = getIntent().getExtras();
-        String s = data.getString("code");
+        String s = "1$"+data.getString("code");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkin);
 
