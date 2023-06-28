@@ -39,9 +39,6 @@
             android:name=".available_slots"
             android:exported="false" />
         <activity
-            android:name=".testDisplay"
-            android:exported="false" />
-        <activity
             android:name=".Status"
             android:exported="false" />
         <activity
