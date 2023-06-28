@@ -57,13 +57,24 @@ public class LogIn extends AppCompatActivity {
                             HashMap<String,String> mp = tools.converPersonalInfo(task.getResult().getValue().toString());
                             mp.put("ID",uid.getText().toString());
                             String ss =mp.get("Password");
+                            assert ss != null;
                             if(ss.equals(pass.getText().toString())){
                                 Toast.makeText(LogIn.this,"Sucessfully Loged In",Toast.LENGTH_SHORT).show();
-                                home = new Intent(LogIn.this,Home.class);
-                                Bundle b = new Bundle();
-                                b.putSerializable("PI",mp);
-                                home.putExtras(b);
-                                startActivity(home);
+
+                                if(mp.size()==2){
+                                    home = new Intent(LogIn.this,admin_home.class);
+                                    Bundle b = new Bundle();
+                                    b.putSerializable("PI",mp);
+                                    home.putExtras(b);
+                                    startActivity(home);
+                                }else {
+                                    home = new Intent(LogIn.this,Home.class);
+                                    Bundle b = new Bundle();
+                                    b.putSerializable("PI",mp);
+                                    home.putExtras(b);
+                                    startActivity(home);
+                                }
+
                             }else {
                                 Toast.makeText(LogIn.this,"Wrong Password",Toast.LENGTH_SHORT).show();
                             }
