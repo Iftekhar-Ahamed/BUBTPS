@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "888078875573",
+    "firebase_url": "https://bubtps-default-rtdb.firebaseio.com",
+    "project_id": "bubtps",
+    "storage_bucket": "bubtps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:888078875573:android:bb614cedc075a5be08b7fc",
+        "android_client_info": {
+          "package_name": "com.example.bubtps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "888078875573-3in76njvvnt02r48sjgfq0vec0ko0lv9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWhYzufCZgWXkSE6fjfcBxNMxmPsrKPGQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "888078875573-3in76njvvnt02r48sjgfq0vec0ko0lv9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
