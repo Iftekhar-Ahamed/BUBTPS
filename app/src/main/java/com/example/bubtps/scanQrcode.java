@@ -70,7 +70,7 @@ public class scanQrcode extends AppCompatActivity {
             if(t[0].equals("1")){
                 pushData(t[1]);
             }else {
-                popdata(t[1]);
+                deletedata(t[1]);
             }
 
         }
@@ -131,6 +131,39 @@ public class scanQrcode extends AppCompatActivity {
         }
         
     }
+    public void popData(String s){
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference().child("Parking Area").child(s).child("Capacity");
+            databaseRef.runTransaction(new Transaction.Handler() {
+                @NonNull
+                @Override
+                public Transaction.Result doTransaction(@NonNull MutableData mutableData) {
+                    // Retrieve the current value from the database
+                    Integer currentValue = mutableData.getValue(Integer.class);
+
+                    if (currentValue == null) {
+                        mutableData.setValue(0);
+                    }
+                    else {
+                        mutableData.setValue(currentValue + 1);
+                    }
+
+                    return Transaction.success(mutableData);
+                }
+
+                @Override
+                public void onComplete(DatabaseError databaseError, boolean committed, DataSnapshot dataSnapshot) {
+
+                    if (databaseError != null) {
+                        // Handle the error
+                        Toast.makeText(scanQrcode.this,"Database failed",Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+
+        }
+
+    }
     public void insertData(String data,String id){
         LocalDate d;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
@@ -157,7 +190,7 @@ public class scanQrcode extends AppCompatActivity {
 
         }
     }
-    public  void popdata(String data){
+    public  void deletedata(String data){
         LocalDate d;
         String[] t= data.split(" ");
         String id = t[0];
@@ -178,8 +211,10 @@ public class scanQrcode extends AppCompatActivity {
                     }else if(task.getResult().getValue()==null || task.getResult().getValue().toString().equals("Nill")){
                         Toast.makeText(scanQrcode.this,"Already CheckOut",Toast.LENGTH_SHORT).show();
                     }else {
+                        popData(t[2]);
                         ref.child("Status").setValue("Nill");
                         ref.child(finalData).setValue(time.toString());
+
                         Toast.makeText(scanQrcode.this,"Successfully CheckOut",Toast.LENGTH_SHORT).show();
                     }
                 }

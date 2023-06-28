@@ -58,12 +58,13 @@ public class Registration extends AppCompatActivity {
                 }else if(task.getResult().getValue()==null){
                     submitprofileinfo();
                     Toast.makeText(Registration.this,"Successfully Added",Toast.LENGTH_SHORT).show();
-                    TextView name = findViewById(R.id.Rname),id = findViewById(R.id.Rid),intake = findViewById(R.id.Rintake),section = findViewById(R.id.Rsection),dept = findViewById(R.id.RDept);
+                    TextView name = findViewById(R.id.Rname),id = findViewById(R.id.Rid),intake = findViewById(R.id.Rintake),section = findViewById(R.id.Rsection),dept = findViewById(R.id.RDept),y=findViewById(R.id.editTextRDate);
                     name.setText(null);
                     id.setText(null);
                     intake.setText(null);
                     section.setText(null);
                     dept.setText(null);
+                    y.setText(null);
 
                 }
                 else {
