@@ -68,6 +68,7 @@ public class Registration extends AppCompatActivity {
                 }
                 else {
                     Toast.makeText(Registration.this,"Already Exits",Toast.LENGTH_SHORT).show();
+                    //ok;
                 }
             }
         });
