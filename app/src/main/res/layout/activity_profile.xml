@@ -48,14 +48,24 @@
         android:id="@+id/textview_dept"
         android:layout_width="339dp"
         android:layout_height="37dp"
-        android:layout_marginBottom="164dp"
+        android:layout_marginBottom="24dp"
         android:gravity="center"
         android:text="Computer Science And Engineering"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/changePassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/changePassword"
+        android:layout_width="196dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="88dp"
+        android:text="Change Password"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView

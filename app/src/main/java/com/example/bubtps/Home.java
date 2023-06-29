@@ -28,17 +28,19 @@ public class Home extends AppCompatActivity {
     Boolean flag = false;
     Dialog checkindialog;
     HashMap<String, String> hashMap;
+    private static final int REQUEST_CODE = 1;
+    Bundle bundle=null;
     String[] checkoutid;
 
     String id,uniqeid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Bundle data = getIntent().getExtras();
+        bundle = getIntent().getExtras();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        if (data != null && data.containsKey("PI")) {
-            hashMap= (HashMap<String, String>) data.getSerializable("PI");
+        if (bundle != null && bundle.containsKey("PI")) {
+            hashMap= (HashMap<String, String>) bundle.getSerializable("PI");
             id=hashMap.get("ID");
         }
         LocalDate d = null;
@@ -82,8 +84,8 @@ public class Home extends AppCompatActivity {
         profile.setOnClickListener(new View.OnClickListener(){
             public  void onClick(View v){
                 Intent profile= new Intent(Home.this, Profile.class);
-                profile.putExtras(data);
-                startActivity(profile);
+                profile.putExtras(bundle);
+                startActivityForResult(profile,REQUEST_CODE);
             }
         });
 
@@ -145,4 +147,15 @@ public class Home extends AppCompatActivity {
             checkindialog.show();
         }
     }
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
+            bundle = data.getExtras();
+            if (bundle != null && bundle.containsKey("PI")) {
+                hashMap= (HashMap<String, String>) bundle.getSerializable("PI");
+            }
+        }
+    }
+
 }
